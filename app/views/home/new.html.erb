@@ -1,0 +1,6 @@
+<%= form_tag('/home/create', method: :post) do %>
+		<h3>新規作成</h3>
+		<input placeholder="タスク名(16文字まで)" type="text" name="name">
+		<textarea cols="30" name="text" placeholder="内容" rows="10"></textarea>
+		<input type="submit" value="作成" class="btn btn-primary">
+	<% end %>

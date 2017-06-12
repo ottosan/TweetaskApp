@@ -1,0 +1,23 @@
+<% if  current_user && @tasks %>
+	<h3>タスク一覧</h3>
+	<% @tasks.each do |task| %>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+			<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-8">
+					<%= task.name %>
+				</div>
+				<div class="btns col-sm-4">
+					<%= link_to '編集', "home/edit/#{task.id}", method: :get, class: "btn btn-warning" %> 
+					<%= link_to '削除', "home/#{task.id}", method: :delete, class: "btn btn-danger" %> 
+					<%= link_to '完了', "home/done/#{task.id}", method: :patch, class: "btn btn-success" %>
+				</div>
+			</div></div></div>
+			<div class="panel-body"><%= simple_format(task.text) %></div>
+		</div>
+	<% end %>
+<% else %>
+<h1>TWEETASK</h1>
+<h2>Twitter連携タスク管理アプリ</h2>
+<% end %>

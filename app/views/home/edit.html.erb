@@ -1,0 +1,6 @@
+<%= form_tag("/home/update/#{@task.id}", method: :patch) do %>
+	<h3>編集</h3>
+	<input value="<%= @task.name %>" type="text" name="name">
+	<textarea cols="30" name="text" rows="10"><%= @task.text %></textarea>
+	<input type="submit" value="完了" class="btn btn-primary">
+<% end %>

@@ -1,0 +1,27 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btns{
+	text-align: right;
+}
+
+.panel-heading{
+	font-size: 20px;
+}
+
+input, textarea{
+	display: block;
+	width: 100%;
+	margin: 20px 0;
+}
+
+h3{
+	text-align: center;
+	color: #777;
+}
+
+.success a{
+	display: block;
+	text-align: center;
+}
